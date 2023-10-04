@@ -16,10 +16,8 @@ def get_settlements():
         if file.endswith('.csv'):
             file_path = os.path.join(settlements_path, file)
 
-            # Read the CSV file into a DataFrame
             df = pd.read_csv(file_path, sep=";")
 
-            # Append the DataFrame to the combined_data DataFrame
             settlements.append(df)
 
             settlements_all = pd.concat(settlements, ignore_index=True)
